@@ -15,12 +15,10 @@ def v_line_exist(edges: List[List[int]], a: int, b: int):
     return True
 
 def is_square(edges: List[List[int]], num: int, size: int) -> bool:
-    if h_line_exist(edges, num, num + size) and \
+    return h_line_exist(edges, num, num + size) and \
             h_line_exist(edges, num + 4 * size, num + size + 4 * size) and \
             v_line_exist(edges, num + size, num + size + 4 * size) and \
-            v_line_exist(edges, num, num + 4 * size):
-        return True
-    return False
+            v_line_exist(edges, num, num + 4 * size)
 
 
 def check_squares(edges: List[List[int]], i: int, j: int) -> int:

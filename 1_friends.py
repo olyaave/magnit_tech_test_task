@@ -1,11 +1,10 @@
-from typing import List
 
 class Friend:
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
         self._invites = []
     
-    def invite(self, invite_message):
+    def invite(self, invite_message: str):
         self._invites.append(invite_message)
         
     def show_invite(self):
